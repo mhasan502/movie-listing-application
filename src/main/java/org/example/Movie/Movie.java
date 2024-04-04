@@ -2,7 +2,13 @@ package org.example.Movie;
 
 import java.util.List;
 
-public record Movie(String title, List<String> cast, String category, String releaseDate, Integer budget) {
+public record Movie(
+        String title,
+        List<String> cast,
+        String category,
+        String releaseDate,
+        Integer budget
+) {
     public Movie(String title, List<String> cast, String category, String releaseDate, Integer budget) {
 
         if (title != null && !title.trim().isEmpty())

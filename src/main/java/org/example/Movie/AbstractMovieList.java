@@ -35,7 +35,7 @@ public abstract class AbstractMovieList {
                 }
             }
         }
-
+        searchResults.sort(Comparator.comparing(movie -> movie.title().toLowerCase()));
         searchResults.sort(Comparator.comparing(movie -> movie.category().toLowerCase()));
 
         return searchResults;
@@ -48,6 +48,7 @@ public abstract class AbstractMovieList {
                 searchResults.add(movie);
             }
         }
+        searchResults.sort(Comparator.comparing(movie -> movie.title().toLowerCase()));
         searchResults.sort(Comparator.comparing(movie -> movie.category().toLowerCase()));
 
         return searchResults;
